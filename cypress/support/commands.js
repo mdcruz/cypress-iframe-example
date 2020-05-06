@@ -1,6 +1,6 @@
-Cypress.Commands.add('getIframeDocument', () => {
+Cypress.Commands.add('getIframeDocument', (iframe) => {
   return cy
-    .get('#mce_0_ifr')
+    .get(iframe)
     .its('0.contentDocument.body')
     .should('not.be.empty')
     .then(cy.wrap);
