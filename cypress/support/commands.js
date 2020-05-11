@@ -1,4 +1,4 @@
-Cypress.Commands.add('getIframeDocument', (iframe) => {
+Cypress.Commands.add('switchToIframe', (iframe) => {
   return cy
     .get(iframe)
     .its('0.contentDocument.body')
